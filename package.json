@@ -1,0 +1,23 @@
+{
+  "name": "modsecurity-dashboard",
+  "version": "1.0.0",
+  "description": "modsecurity log analyzer and dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "modsecurity",
+    "log",
+    "analyzer",
+    "dashboard",
+    "nodejs"
+  ],
+  "author": "Loksly",
+  "license": "MIT",
+  "dependencies": {
+    "always-tail": "^0.2.0",
+    "express": "^4.16.2",
+    "tailable-capped-array": "^0.1.0"
+  }
+}

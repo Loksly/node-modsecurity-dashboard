@@ -1,0 +1,6 @@
+{
+	"size": 30,
+	"logfile": "/var/log/apache2/modsec_audit.log",
+	"port": 5050,
+	"resource": "/elements"
+}
