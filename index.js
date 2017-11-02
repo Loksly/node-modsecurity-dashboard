@@ -9,7 +9,7 @@
 		config = require('./config.json');
 
 	const elements = new TCA(config.size),
-		tail = new Tail(config.logfile, "\n");
+		tail = new Tail(config.logfile, "\n", {start: 0});
 
 	const state = {
 		lastitem: false,
