@@ -143,10 +143,6 @@
 								$rootScope.elements.splice(MAXSIZE, $rootScope.elements.length - MAXSIZE);
 							}
 
-							if ($rootScope.elements.length > 0){
-								$rootScope.selected = $rootScope.elements[0];
-							}
-
 							if (typeof searchObject.id === 'string'){
 								$rootScope.selected = $rootScope.elements.reduce(function(p, e){
 									return e.id === String(searchObject.id) ? e : p;
@@ -154,6 +150,7 @@
 							}
 
 							if (newMessage){
+								$rootScope.selected = $rootScope.elements[0];
 								notify(newMessage, newMessage.status + ' ' + newMessage.method + ' ' + newMessage.Host + newMessage.resource)
 							}
 
@@ -161,6 +158,6 @@
 				}
 
 				refresh();
-				$interval(refresh, 30000);
+				$interval(refresh, 300000);
 			}
 		]);
