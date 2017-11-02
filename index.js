@@ -1,7 +1,8 @@
 (function(){
 	'use strict';
 
-	const Tail = require('always-tail'),
+	const path = require('path'),
+		Tail = require('always-tail'),
 		TCA = require('tailable-capped-array'),
 		express = require('express'),
 		app = express(),
@@ -49,6 +50,8 @@
 	app.get(config.resource, function(req, res){
 		res.jsonp(elements.toArray());
 	});
+
+	app.use('/', express.static(path.join(__dirname, 'public')));
 
 	app.listen(config.port);
 })();
